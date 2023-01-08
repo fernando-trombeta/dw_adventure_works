@@ -2,10 +2,17 @@ version: 2
 
 sources:
   - name: erp_aw
-    description: Banco réplica do erp da adventure works.
+    description: The adventure works postgres database replica.
     schema: adventure_works_el
     tables:
       - name: address
+        description: This table contains customer address information.
+        columns:
+          - name: addressid
+            description: The primary key of the address table.
+            tests:
+              - unique
+              - not_null
 
       - name: countryregion
 
