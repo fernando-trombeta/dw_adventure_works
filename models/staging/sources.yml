@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: erp_aw
+    description: Banco réplica do erp da adventure works.
+    schema: adventure_works_el
+    tables:
+      - name: address
+
+      - name: countryregion
+
+      - name: creditcard
+
+      - name: customer
+
+      - name: person
+
+      - name: product
+
+      - name: salesorderdetail
+
+      - name: salesorderheader
+
+      - name: salesorderheadersalesreason
+
+      - name: salesreason
+
+      - name: stateprovince
+      
+      - name: store
+
+
+
+
+
+
+
+
+
