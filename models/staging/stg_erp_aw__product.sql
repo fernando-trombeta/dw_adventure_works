@@ -4,7 +4,6 @@ with
             cast(productid as int) as id_product
             , cast(productmodelid as int) as id_product_model
             , cast(productsubcategoryid as int) id_product_sub_category
-
             , cast(name as string) as product_name
             , cast(productnumber as string) as product_number
             , cast(size as string) as product_size
