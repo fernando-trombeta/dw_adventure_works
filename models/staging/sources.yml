@@ -1,0 +1,58 @@
+version: 2
+
+sources:
+  - name: erp_aw
+    description: The adventure works postgresSQL database replica.
+    schema: adventure_works_el
+    tables:
+      - name: address
+        description: This table contains customer address information.
+        columns:
+          - name: addressid
+            description: The primary key of the address table.
+            tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        description: This table contains the country regions information.
+        columns:
+          - name: countryregioncode
+            description: This column contains the country region code information.
+            tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        description: fazer a documentação das tabelas abaixo e colunas restantes acima
+
+      - name: customer
+
+      - name: person
+
+      - name: product
+
+      - name: productcategory
+
+      - name: productsubcategory
+
+      - name: salesorderdetail
+
+      - name: salesorderheader
+
+      - name: salesorderheadersalesreason
+
+      - name: salesreason
+
+      - name: stateprovince
+      
+      - name: store
+
+
+
+
+
+
+
+
+
