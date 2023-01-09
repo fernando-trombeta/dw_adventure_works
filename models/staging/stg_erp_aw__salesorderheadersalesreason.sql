@@ -14,3 +14,5 @@ with
     )
 select *
 from source_salesorderheadersalesreason
+
+/* Essa tabela não tem chave primária??  */
