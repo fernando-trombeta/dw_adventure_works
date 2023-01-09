@@ -1,7 +1,7 @@
 with
     source_salesorderheader as (
         select
-            cast(salesorderid as int) as id_sales_order
+            cast(salesorderid as int) as id_sales_order_header
             , cast(customerid as int) as id_customer
             , cast(territoryid as int) as id_territory
             , cast(shipmethodid as int) as id_ship_method
