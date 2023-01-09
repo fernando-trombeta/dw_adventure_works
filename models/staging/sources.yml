@@ -32,6 +32,10 @@ sources:
 
       - name: product
 
+      - name: productcategory
+
+      - name: productsubcategory
+
       - name: salesorderdetail
 
       - name: salesorderheader
