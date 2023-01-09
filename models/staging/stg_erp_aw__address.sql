@@ -16,7 +16,7 @@ with
            , cast(_sdc_sequence as int)	as _sdc_sequence
            , cast(_sdc_batched_at as timestamp) as _sdc_batched_at	
            , cast(_sdc_received_at as timestamp) as _sdc_received_at 
-        from {{ source('erp_aw' , 'address') }}
+        from {{ source('erp_aw', 'address') }}
     )
 
 select *

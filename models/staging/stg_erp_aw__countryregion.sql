@@ -10,7 +10,7 @@ with
             , cast(_sdc_table_version as int) as _sdc_table_version		
             , cast(_sdc_received_at	as timestamp) as _sdc_received_at		
             , cast(_sdc_batched_at as timestamp) as _sdc_batched_at
-        from {{ source('erp_aw' , 'countryregion') }}
+        from {{ source('erp_aw', 'countryregion') }}
     )
 
 select *

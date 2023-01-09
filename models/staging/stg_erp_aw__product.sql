@@ -32,7 +32,7 @@ with
             , cast(_sdc_sequence as int) as _sdc_sequence
             , cast(_sdc_received_at as timestamp) as _sdc_received_at
             , cast(_sdc_batched_at as timestamp) as _sdc_batched_at			
-        from {{ source('erp_aw' , 'product') }}
+        from {{ source('erp_aw', 'product') }}
     )
 select *
 from source_product
