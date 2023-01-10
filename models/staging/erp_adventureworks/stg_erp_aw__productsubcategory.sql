@@ -4,7 +4,7 @@ with
             cast(productsubcategoryid as int) as id_product_sub_category
             , cast(productcategoryid as int) as id_product_category
             , cast(name as string) as sub_category_name
-            , cast(rowguid as string) as sub_category
+            , cast(rowguid as string) as rowguid
             , cast(modifieddate as timestamp) as modified_date
 
             /* columns created by stitch */
