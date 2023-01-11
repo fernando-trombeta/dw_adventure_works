@@ -1,7 +1,7 @@
 with
     source_creditcard as(
         select
-            cast(creditcardid as int) as id_creditcard
+            cast(creditcardid as int) as id_credit_card
             , cast(cardtype as string) as card_type
             , cast(expmonth as int) as expiration_month
             , cast(expyear as int) as expiration_year
