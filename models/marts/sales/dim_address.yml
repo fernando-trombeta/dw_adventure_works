@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_address
+    description: Tabela dimensão de endereços.
+    columns:
+      - name: sk_address
+        description: Chave primária da tabela de endereços. ??
+        tests:
+          - unique
+          - not_null
+
+      - name: id_state_province
+        description: Chave primária da tabela de stateprovince. ??
+         
