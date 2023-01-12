@@ -2,7 +2,7 @@ with
     source_salesorderdetail as (
         select
             cast(salesorderdetailid as int) as id_sales_order_detail
-            , cast(salesorderid as int) as id_sales_order
+            , cast(salesorderid as int) as id_sales_order_header
             , cast(productid as int) as id_product
             , cast(specialofferid as int) as id_special_offer
             , cast(orderqty as int) as order_quantity
