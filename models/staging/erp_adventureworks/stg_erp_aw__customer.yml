@@ -1,0 +1,22 @@
+version: 2
+
+
+models:
+
+  - name: stg_erp_aw__customer
+    description: Staging table for customer.
+    columns:
+      - name: id_customer
+        description: Primary key.
+        tests:
+          - unique
+          - not_null
+          
+      - name: id_person
+        description: Foreign key to Person.
+
+      - name: id_territory
+        description: ID of the territory in which the customer is located. Foreign key to SalesTerritory.
+
+      - name: id_store
+        description: Foreign key for store.businessentityid

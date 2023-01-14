@@ -1,0 +1,36 @@
+version: 2
+
+models:
+
+  - name: stg_erp_aw__person
+    description: Staging table for person.
+    columns:
+
+      - name: id_person
+        description: Unique identification for persons records.
+        tests:
+          - not_null
+          - unique
+
+      - name: person_title
+        description: A courtesy title. For example, Mr. or Ms.
+
+      - name: first_name
+        description: First name of the person.
+
+      - name: middle_name
+        description: Middle name or middle initial of the person.
+
+      - name: last_name
+        description: Last name of the person.
+        
+      - name: person_type
+        description: Primary type of person (SC = Store Contact, IN = Individual (retail) customer, SP = Sales person, EM = Employee (non-sales), VC = Vendor contact, GC = General contact).
+
+      - name: name_style
+        description: 0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order.
+
+      - name: suffix
+        description: Surname suffix. For example, Sr. or Jr.
+
+      

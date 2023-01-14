@@ -1,0 +1,20 @@
+version: 2
+
+models:
+
+    - name: stg_erp_aw__store
+      description: Staging table for store.
+      columns:
+        - name: id_store
+          description: Primary key. Foreign key to Customer.BusinessEntityID.
+          tests:
+            - unique
+            - not_null
+          
+        - name: store_name
+          description: Name of the store.
+
+        - name: id_sales_person
+          description: ID of the sales person assigned to the customer. Foreign key to SalesPerson.BusinessEntityID.
+
+       

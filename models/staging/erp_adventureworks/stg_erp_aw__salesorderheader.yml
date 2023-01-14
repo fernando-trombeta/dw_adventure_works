@@ -1,0 +1,46 @@
+version: 2
+
+models:
+
+  - name: stg_erp_aw__salesorderheader
+    description: Staging table for salesorderheader.
+    columns:
+
+      - name: id_sales_order_header
+        description: Unique identification for sales order.
+        tests:
+          - not_null
+          - unique
+
+      - name: id_customer
+        description: Customer identification number. Foreign key to stg_customers table.
+
+      - name: id_sales_person
+        description: Sales person who created the sales order. Foreign key to stg_persons table.
+
+      - name: id_bill_to_address
+        description: Customer billing address. Foreign key to stg_addresses table.
+
+      - name: id_territory
+        description: Territory in which the sale was made. Foreign key to SalesTerritory.
+
+      - name: id_credit_card
+        description: Credit card identification number. Foreign key to stg_creditcards table.
+
+      - name: order_status
+        description: Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
+
+      - name: order_date
+        description: Dates the sales order was created.
+
+      - name: id_ship_method
+        description: Shipping method. Foreign key to ShipMethod.ShipMethodID.
+
+       
+
+
+
+
+        
+
+      
