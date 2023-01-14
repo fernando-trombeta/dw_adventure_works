@@ -1,0 +1,15 @@
+version: 2
+
+models:
+
+    - name: stg_erp_aw__productcategory
+      description: Staging table for productcategory.
+      columns:
+        - name: id_product_category
+          description: Primary key for ProductCategory records.
+          tests:
+            - unique
+            - not_null
+
+        - name: category_name
+          description: Category description.

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+
+  - name: stg_erp_aw__address
+    description: Staging table for address.
+    columns:
+      - name: id_address
+        description: Primary key for Address records.
+        tests:
+          - unique
+          - not_null
+      
+      - name: city
+        description: Name of the city
+        
+      - name: postal_code
+        description: Postal code for the street address.
+      
+      - name: id_state_province
+        description: Unique identification number for the state or province. Foreign key to StateProvince table.
+
+      - name: address_line_1
+        description: Address information.

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+
+  - name: stg_erp_aw__countryregion
+    description: Staging table for countryregion.
+    columns:
+      - name: country_region_code
+        description: ISO standard code for countries and regions.
+        tests:
+          - unique
+          - not_null
+      - name: country_name
+        description: Country or region name.

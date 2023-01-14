@@ -1,0 +1,22 @@
+version: 2
+
+
+models:
+
+  - name: stg_erp_aw__creditcard
+    description: Staging table for creditcard.
+    columns:
+      - name: id_credit_card
+        description: Primary key for CreditCard records.
+        tests:
+          - not_null
+          - unique
+
+      - name: card_type
+        description: Credit card type.
+
+      - name: expiration_month
+        description: Credit card expiration month.
+
+      - name: expiration_year
+        description: Credit card expiration year.

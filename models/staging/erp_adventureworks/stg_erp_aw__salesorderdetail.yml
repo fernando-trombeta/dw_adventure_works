@@ -1,0 +1,34 @@
+version: 2
+
+models:
+
+  - name: stg_erp_aw__salesorderdetail
+    description: Staging table for salesorderdetail.
+    columns:
+
+      - name: id_sales_order_detail
+        description: Primary key. One incremental unique number per product sold.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_sales_order_header
+        description: Primary key. Foreign key to SalesOrderHeader.
+        tests:
+          - not_null          
+
+      - name: order_quantity
+        description: Quantity ordered per product.
+
+      - name: id_product
+        description: Product sold to customer. Foreign key to Product.
+            
+      - name: unit_price
+        description: Selling price of a single product.
+          
+      - name: unit_price_discount
+        description: Discount amount.
+
+      - name: id_special_offer
+        description: Promotional code. Foreign key to SpecialOffer.SpecialOfferID.
+        

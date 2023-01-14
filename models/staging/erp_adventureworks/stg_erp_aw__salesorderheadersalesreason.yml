@@ -1,0 +1,14 @@
+version: 2
+
+models:
+
+    - name: stg_erp_aw__salesorderheadersalesreason
+      description: Staging table for salesorderheadersalesreason.
+      columns:
+          - name: id_sales_order_header
+            description: Primary key. Foreign key to SalesOrderHeader.
+            tests:
+                - not_null
+                
+          - name: id_sales_reason
+            description: Primary key. Foreign key to SalesReason.
