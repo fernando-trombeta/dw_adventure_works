@@ -11,9 +11,9 @@ with
             , cast(creditcardid as int) as id_credit_card
             , cast(salespersonid as int) as id_sales_person
             , cast(freight as numeric) as freight
-            , cast(totaldue as numeric) as total_due
             , cast(taxamt as numeric) as tax_amt
             , cast(subtotal as numeric) as sub_total
+            , cast(totaldue as numeric) as total_due
             , cast(orderdate as timestamp) as order_date
             , cast(duedate as timestamp) as due_date
             , cast(shipdate as timestamp) as ship_date

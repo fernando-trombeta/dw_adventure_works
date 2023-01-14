@@ -27,6 +27,12 @@ with
         from {{ ref('stg_erp_aw__stateprovince') }}
     )
 
+    , salesorderheader as (
+        select 
+            distinct(id_ship_to_address)
+        from {{ref('stg_erp_aw__salesorderheader')}}
+)
+
     , joined as (
         select    
             address.id_address
@@ -40,9 +46,11 @@ with
             , stateprovince.state_province_name
             , stateprovince.state_province_code
             , stateprovince.is_only_state_province_flag
+            , salesorderheader.id_ship_to_address
         from address
         left join stateprovince on address.id_state_province = stateprovince.id_state_province
         left join countryregion on stateprovince.country_region_code = countryregion.country_region_code
+        left join salesorderheader on address.id_address = salesorderheader.id_ship_to_address
     )
 
     , transformed as (
