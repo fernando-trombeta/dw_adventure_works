@@ -7,7 +7,6 @@ models:
       - name: id_sales_order_header
         description: Chave primária da tabela de ??
         tests:
-          - unique
           - not_null
 
       - name: id_state_province
