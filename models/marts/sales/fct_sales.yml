@@ -1,13 +1,120 @@
 version: 2
 
 models:
-  - name: fct_sales
-    description: ??
-    columns:
-      - name: id_sales_order_header
-        description: Chave primária da tabela de ??
-        tests:
-          - not_null
 
-      - name: id_state_province
-        description: Chave primária da tabela de stateprovince. ??
+    - name: fct_sales
+      description: Fact Table for sales.
+      columns:
+        - name: id_sales_order_header
+          description: The primary key of the sales order header.
+          tests:
+            - not_null 
+
+        - name: id_sales_order_detail
+          description: The primary key of the sales order detail.
+          tests:
+            - not_null 
+
+        - name: fk_product
+          description: The foreign key of the product.
+          tests:
+            - not_null 
+
+        - name: fk_customer
+          description: The foreign key of the customer.
+          tests:
+            - not_null 
+
+        - name: fk_address
+          description: The foreign key of the address.
+          tests:
+            - not_null 
+
+        - name: fk_credit_card
+          description: The foreign key of the credit card.
+
+        - name: id_territory
+          description: ID of the territory in which the customer is located.
+          tests:
+            - not_null 
+
+        - name: id_currency_rate
+          description: Currency exchange rate used.
+
+        - name: id_sales_person
+          description: Primary key for Person records.
+
+        - name: id_special_offer
+          description: Promotional code.
+          tests:
+            - not_null
+
+        - name: order_quantity
+          description: Quantity ordered per product.
+          tests:
+            - not_null 
+
+        - name: unit_price
+          description: Selling price of a single product.
+          tests:
+            - not_null 
+
+        - name: unit_price_discount
+          description: Discount amount.
+          tests:
+            - not_null 
+
+        - name: tax_amt
+          description: Tax amount.
+          tests:
+            - not_null 
+
+        - name: sub_total
+          description: Sales subtotal. Computed as SUM(SalesOrderDetail.LineTotal) for the appropriate SalesOrderID.
+          tests:
+            - not_null 
+
+        - name: freight
+          description: Shipping cost.
+          tests:
+            - not_null
+
+        - name: total_due
+          description: Total due from customer. Computed as Subtotal + TaxAmt + Freight.
+          tests:
+            - not_null
+
+        - name: order_date
+          description: Dates the sales order was created.
+          tests:
+            - not_null
+
+        - name: due_date
+          description: Date the order is due to the customer.
+          tests:
+            - not_null
+
+        - name: order_status_name
+          description: The order's status.
+          tests:
+            - not_null
+
+        - name: reason_name_final
+          description: The reason name of the sale.
+          tests:
+            - not_null
+
+        - name: revenue
+          description: The revenue obtained by multiplying unitprice and orderqty.
+          tests:
+                                     
+                                               
+                                
+                                    
+                          
+             
+             
+             
+             
+             
+             

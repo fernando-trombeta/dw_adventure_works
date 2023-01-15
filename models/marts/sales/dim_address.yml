@@ -1,15 +1,47 @@
 version: 2
 
 models:
+
   - name: dim_address
-    description: Tabela dimensão de endereços.
+    description: Dimension table for address.
     columns:
       - name: sk_address
-        description: Chave primária da tabela de endereços. ??
+        description: The surrogate key of the address.
         tests:
           - unique
           - not_null
 
       - name: id_state_province
-        description: Chave primária da tabela de stateprovince. ??
+        description: Unique identification number for the state or province.
+        tests:
+       
+      - name: id_territory
+        description: ID of the territory in which the customer is located.
+        tests:
+
+      - name: id_ship_to_address
+        description: The address id shipped.
+        tests:
+
+      - name: country_region_code
+        description: ISO standard code for countries and regions.
+
+      - name: address_line_1
+        description: Address information.
+
+      - name: city
+        description: The city name.
+
+      - name: postal_code
+        description: Postal code for the street address.
+
+      - name: country_name
+        description: The country name.
+
+      - name: state_province_name
+        description: The state name.
+
+      - name: state_province_code
+        description: The state code.
+
          

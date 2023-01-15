@@ -1,0 +1,42 @@
+version: 2
+
+models:
+
+    - name: dim_product
+      description: Dimension table for product.
+      columns:
+        - name: sk_product
+          description: The surrogate key of the product.
+          tests:
+            - unique
+            - not_null  
+
+        - name: id_product_model
+          description: Product is a member of this product model.
+
+        - name: id_product_category
+          description: Primary key for ProductCategory records.
+
+        - name: id_product_sub_category
+          description: Product is a member of this product subcategory.
+
+        - name: product_name
+          description: Name of the product.
+
+        - name: product_number
+          description: Unique product identification number.
+
+        - name: category_name
+          description: Name of the category.
+
+        - name: sub_category_name
+          description: Name of the sub category.
+
+        - name: product_color
+          description: The color of the product.
+
+        - name: list_price
+          description: Selling price.                                    
+                          
+            
+       

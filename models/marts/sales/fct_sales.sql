@@ -72,7 +72,7 @@ with
         left join salesreason on stg_salesorderdetail.id_sales_order_header = salesreason.id_sales_order_header
     )
 
-    /* final_joined for table salesorderdetail and salesorderheader */
+    /* final_joined for table salesorderdetail and table salesorderheader */
     , final_joined as (
         select
             salesorderheader.id_sales_order_header
@@ -106,8 +106,8 @@ with
     , transformed as (
         select
             *
-            , unit_price * order_quantity as total_sales
-            /* , {{ dbt_utils.surrogate_key(['id_sales_order_header', 'fk_product']) }} as sk_fct_sales */
+            , (unit_price * order_quantity) as revenue
+            , {{ dbt_utils.surrogate_key(['id_sales_order_header', 'fk_product']) }} as sk_fct_sales
         from final_joined
     )
 
