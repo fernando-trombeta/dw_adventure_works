@@ -13,6 +13,8 @@ models:
       
       - name: city
         description: Name of the city
+        tests:
+          - not_null
         
       - name: postal_code
         description: Postal code for the street address.

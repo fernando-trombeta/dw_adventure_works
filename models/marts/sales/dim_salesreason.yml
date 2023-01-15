@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+    - name: dim_salesreason
+      description: Dimension table for salesreason.
+      columns:
+        - name: id_sales_order_header
+          description: The primary key of the sales order header.
+          tests:
+            - unique
+            - not_null 
+
+        - name: sales_reason_name_aggregated
+          description: The sales reason name aggregated.
+
+
+            
+            

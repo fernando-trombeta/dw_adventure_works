@@ -1,0 +1,37 @@
+version: 2
+
+models:
+
+    - name: dim_customer
+      description: Dimension table for customer.
+      columns:
+        - name: sk_customer
+          description: The surrogate key of the customer.
+          tests:
+            - unique
+            - not_null  
+
+        - name: id_territory
+          description: ID of the territory in which the customer is located.
+          
+        - name: id_person
+          description: Foreign key to Person.
+         
+        - name: id_store
+          description: Foreign key for store.
+         
+        - name: id_sales_person
+          description: Primary key for Person records.
+         
+        - name: person_title
+          description: A courtesy title.
+
+        - name: full_name
+          description: Full name of the person.   
+
+        - name: store_name
+          description: Name of the store.                                                  
+            
+              
+          
+            
