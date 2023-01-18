@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: erp_aw
-    description: The adventure works postgresSQL database replica.
+    description: The adventure works postgreSQL database replica.
     schema: adventure_works_el
     tables:
 
